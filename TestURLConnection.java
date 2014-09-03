@@ -39,6 +39,7 @@ public class TestURLConnection {
 			System.out.println("Transfer-Length:" + connection.getHeaderField("Transfer-Length"));
 			System.out.println("Expires:" + connection.getHeaderField("Expires"));
 			System.out.println("Cache-Control:" + connection.getHeaderField("Cache-Control"));
+			System.out.println("Connection:" + connection.getHeaderField("Connection"));
 						
 			System.out.println("******");
 			
