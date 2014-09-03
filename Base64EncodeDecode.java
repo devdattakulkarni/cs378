@@ -1,7 +1,7 @@
 public class Base64EncodeDecode {
 	
 	/*
-	 * Taken from http://ykchee.blogspot.com/2014/03/base64-in-java-8-its-not-too-late-to.html
+	 * Reference http://ykchee.blogspot.com/2014/03/base64-in-java-8-its-not-too-late-to.html
 	 * 
 	 */
 	public void testJava8Base64Encode() throws Exception {
