@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>Testing load-on-startup</display-name>
+  <servlet>
+    <servlet-name>testingLoadOnStartup</servlet-name>
+    <servlet-class>TestingLoadOnStartup</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>testingLoadOnStartup</servlet-name>
+    <url-pattern>/loadOnStartup</url-pattern>
+  </servlet-mapping>
+</web-app>
