@@ -21,7 +21,7 @@ public class TestingLoadOnStartup extends HttpServlet {
 	public void init() throws ServletException
 	{
 	    System.out.println("Servlet " + this.getServletName() + " has started.");
-	    for (int i=0; i<5; i++) {
+	    for (int i=0; i<2; i++) {
 	    	try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {

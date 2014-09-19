@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 public class TestingThreadServlet extends HttpServlet {
 	
@@ -17,10 +18,18 @@ public class TestingThreadServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException
 	{
-		String userAgent = (String) request.getHeader("User-Agent");
+		String userAgent = (String) request.getHeader("X-User-Agent");
 		if (userAgent != null && userAgent.equalsIgnoreCase("TestRunner")) {
 			increment();
 		}
+		
+		Enumeration<String> headers = request.getHeaderNames();
+		/*while (headers.hasMoreElements()) {
+			String header = headers.nextElement();
+			String value = request.getHeader(header);
+			response.getWriter().println("Header:" + header + " Value:" + value);					
+		}*/
+		
 		response.getWriter().println("Testing thread says hello. Counter value is:" + counter);		
 	}
 	
