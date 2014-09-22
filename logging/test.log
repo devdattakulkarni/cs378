@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2014-09-16T20:41:34</date>
+  <millis>1410918094280</millis>
+  <sequence>0</sequence>
+  <logger>cs378.examples.TestFileLogger</logger>
+  <level>SEVERE</level>
+  <class>cs378.examples.TestFileLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Simulating an exception</message>
+  <exception>
+    <message>java.lang.Exception: Simulating an exception</message>
+    <frame>
+      <class>cs378.examples.TestFileLogger</class>
+      <method>main</method>
+      <line>23</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2014-09-16T20:41:34</date>
+  <millis>1410918094295</millis>
+  <sequence>1</sequence>
+  <logger>cs378.examples.TestFileLogger</logger>
+  <level>INFO</level>
+  <class>cs378.examples.TestFileLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>This is a info-level message</message>
+</record>
+<record>
+  <date>2014-09-16T20:41:34</date>
+  <millis>1410918094296</millis>
+  <sequence>2</sequence>
+  <logger>cs378.examples.TestFileLogger</logger>
+  <level>CONFIG</level>
+  <class>cs378.examples.TestFileLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>This is a config-level message</message>
+</record>
+<record>
+  <date>2014-09-16T20:41:34</date>
+  <millis>1410918094296</millis>
+  <sequence>3</sequence>
+  <logger>cs378.examples.TestFileLogger</logger>
+  <level>FINE</level>
+  <class>cs378.examples.TestFileLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>This is a fine-level message</message>
+</record>
+<record>
+  <date>2014-09-16T20:41:34</date>
+  <millis>1410918094296</millis>
+  <sequence>4</sequence>
+  <logger>cs378.examples.TestFileLogger</logger>
+  <level>FINER</level>
+  <class>cs378.examples.TestFileLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>This is a finer-level message</message>
+</record>
+<record>
+  <date>2014-09-16T20:41:34</date>
+  <millis>1410918094296</millis>
+  <sequence>5</sequence>
+  <logger>cs378.examples.TestFileLogger</logger>
+  <level>FINEST</level>
+  <class>cs378.examples.TestFileLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>This is a finest-level message</message>
+</record>
+</log>
+Sep 16, 2014 8:43:07 PM cs378.examples.TestFileLogger main
+SEVERE: Simulating an exception
+java.lang.Exception: Simulating an exception
+	at cs378.examples.TestFileLogger.main(TestFileLogger.java:24)
+
+Sep 16, 2014 8:43:07 PM cs378.examples.TestFileLogger main
+INFO: This is a info-level message
+Sep 16, 2014 8:43:07 PM cs378.examples.TestFileLogger main
+CONFIG: This is a config-level message
+Sep 16, 2014 8:43:07 PM cs378.examples.TestFileLogger main
+FINE: This is a fine-level message
+Sep 16, 2014 8:43:07 PM cs378.examples.TestFileLogger main
+FINER: This is a finer-level message
+Sep 16, 2014 8:43:07 PM cs378.examples.TestFileLogger main
+FINEST: This is a finest-level message
