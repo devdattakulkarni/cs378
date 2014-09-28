@@ -44,7 +44,7 @@ public class TestQueryParameters extends HttpServlet {
 		//response.getWriter().println("Request URI:" + request.getRequestURI());
 		//response.getWriter().println("Servlet Path:" + request.getServletPath());
 		
-		
+	    System.out.println("Root directory:" + getServletContext().getRealPath(""));
 		response.getWriter().println("<html>");
 		response.getWriter().println("<form action=\"/qp/queryparam\" method=\"post\">");
 		response.getWriter().println("<input type=\"text\" name=\"username\">");
@@ -60,25 +60,7 @@ public class TestQueryParameters extends HttpServlet {
 		userData.put("V1", "V2");
 	}
 	
-	
-	/**
-	 * Multiple values for a parameter
-	 */
-	//@Override
-	protected void doGet_1(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException
-	{
-		Map<String, String[]> params = request.getParameterMap();
-		for(Entry<String, String[]> param : params.entrySet()) {
-			String [] vals = param.getValue();
-			String value = "";
-			for(int i=0; i<vals.length; i++) {
-				value += vals[i] + "::";
-			}
-			response.getWriter().println("Param:" + param.getKey() + " Value:" + value);
-		}
-	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException
@@ -103,6 +85,7 @@ public class TestQueryParameters extends HttpServlet {
 		
 		    String filename = getServletContext().getRealPath("/WEB-INF/userData.txt");
 		    System.out.println("FileName:" + filename);
+
 		    FileOutputStream f = new FileOutputStream(filename);
 		    PrintWriter pw = new PrintWriter(f);
 			Cookie cookies[] = request.getCookies();			
