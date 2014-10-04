@@ -1,0 +1,1 @@
+Exercises for CS 378
