@@ -3,13 +3,52 @@ Assignment 3 related:
 
 Basic directory structure for assignment3
 
-Once you download the folder, importing it into Eclipse as a Maven project
-should set things up.
+Once you download the folder follow these steps to setup the project.
 
-Assumes '/' as the context root.
+1) In Eclipse create a new project of type 'Dynamic Web Project'
+2) In the project viewer, right click on the project's src directory
+3) Click on 'Build Path' and 'Remove from Build Path'
+4) Right click on src directory and select 'create folder'
+5) Add 'main/java' as the folder within 'src'
+6) Repeat steps 4 and 5 for 'test/java' as the folder
 
-How to change the context root in Eclipse?
-right click project -> choose 'Properties' -> choose 'Web Project Settings'
+After this you should see following directory structure created:
+src/main/java
+src/test/java
+
+7) Right click the 'java' folder within 'main' folder
+8) Click on 'Build Path' and 'Add to Build Path'
+9) Repeat steps 7 and 8 for 'java' folder within 'test folder'
+
+After this Eclipse will recognize your java folders as source folders
+
+10) Create 'assign.controllers' package under src/main/java and
+src/test/java
+
+11) Add the GreetingsController.java to src/main/java/assign/controllers/GreetingsController.java
+
+12) Copy the pom.xml at the top-most level of the project
+
+13) Conver the project to maven
+
+14) Update the maven dependencies
+
+15) Rename WebContent as 'web'
+
+16) Copy servletContext.xml, web.xml, and greetingsController.jsp into appropriate locations
+
+17) Right click on the project and select 'Configure Build Path'
+
+18) Select 'Deployment Assembly'
+
+19) Click 'Add'
+
+20) Select 'Java Build Path Entries'
+
+21) Select 'Maven Dependencies'
+
+22) To change context root: Right click project -> choose 'Properties' -> choose 'Web Project Settings'
+
 
 
 How to run the web app:
