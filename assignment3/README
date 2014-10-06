@@ -1,0 +1,44 @@
+Assignment 3 related:
+----------------------
+
+Basic directory structure for assignment3
+
+Once you download the folder, importing it into Eclipse as a Maven project
+should set things up.
+
+Assumes '/' as the context root.
+
+How to change the context root in Eclipse?
+right click project -> choose 'Properties' -> choose 'Web Project Settings'
+
+
+How to run the web app:
+- right click on the project
+- choose 'Run As'
+- choose 'Run on Server'
+- On the opened browser window go to 'greetingsController.jsp'. I have configured
+my Tomcat to run on port 9080. So the link that opens up when the web app is successfully
+deployed is 'http://localhost:9080/'
+
+- In order to test the web app, I browse to
+
+http://localhost:9080/greetingsController.jsp
+
+
+Code coverage:
+We will use EclEmma for code coverage
+
+Install it following directions given on: http://www.eclemma.org/index.html
+
+Determining code coverage:
+- right click on the project in the project explorer view
+- choose 'Coverage As'
+- choose 'Junit'
+
+
+
+
+
+
+
+
