@@ -20,7 +20,7 @@ public class GreetingsController {
         return "Hi, " + userName; 
     }
 	
-	@ResponseBody
+
     @RequestMapping(value = "/cookie", params = {"user"}, method=RequestMethod.POST)
     public String getGreetingWithCookie(
     		@CookieValue(value = "friendOrStranger", defaultValue = "stranger") String cookieVal,
