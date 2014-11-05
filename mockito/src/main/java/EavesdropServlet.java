@@ -27,6 +27,10 @@ public class EavesdropServlet extends HttpServlet {
 		}
 	}
 	
+	public void setEavesdropHandler(EavesdropHandler edh) {
+		this.eavesdropHandler = edh;
+	}
+	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// Parse query parameters from request

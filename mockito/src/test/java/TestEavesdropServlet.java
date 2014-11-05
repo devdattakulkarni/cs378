@@ -24,7 +24,9 @@ public class TestEavesdropServlet {
 	public void setUp() {
 		// Create the mocks
 		mockedHandler = mock(EavesdropHandler.class);
-		eds = new EavesdropServlet(mockedHandler);
+		//eds = new EavesdropServlet(mockedHandler);
+		eds = new EavesdropServlet();
+		eds.setEavesdropHandler(mockedHandler);
 	}
 	
 	@Test
