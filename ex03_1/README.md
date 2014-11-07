@@ -1,15 +1,15 @@
-Your first JAX_RS Client and Server
+Using JAX-RS Annotations
 ========================
 This project is a simple example showing usage of @Path, @GET, PUT, POST, and @PathParam.  It uses pure streaming
 output as well. 
 
 System Requirements:
 -------------------------
-- Maven 3.0.4 or higher
+- Maven 2.0.9 or higher
 
 Building the project:
 -------------------------
-1. In root directory
+1. In root directoy
 
 mvn clean install
 
