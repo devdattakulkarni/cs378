@@ -9,7 +9,7 @@ import cs378.assignment6.etl.impl.BasicTransformerImpl;
 import cs378.assignment6.service.EavesdropReaderService;
 import cs378.assignment6.service.MeetingDataMgrService;
 
-public class ETLController {
+public class ETLController implements Runnable {
 
 	private Reader eavesdropReader;
 	private Transformer transformer;
@@ -42,5 +42,9 @@ public class ETLController {
 	public static void main(String[] args) {
 		ETLController etlController = new ETLController();
 		etlController.performETLActions();
+	}
+
+	public void run() {
+		performETLActions();
 	}
 }

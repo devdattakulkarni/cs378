@@ -7,9 +7,11 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import cs378.assignment6.domain.Event;
+import cs378.assignment6.domain.MeetingList;
 import cs378.assignment6.etl.Loader;
+import cs378.assignment6.etl.Reader;
 
-public class MeetingDataMgrService implements Loader {
+public class MeetingDataMgrService implements Loader, Reader {
 	private SessionFactory sessionFactory;
 	
 	public MeetingDataMgrService() {
@@ -30,5 +32,12 @@ public class MeetingDataMgrService implements Loader {
 		session.save( new Event( "Meeting record 2", new Date() ) );
 		session.getTransaction().commit();
 		session.close();
+	}
+
+	public Object read(Object source) throws Exception {
+
+		// Build the list of meetings 
+		MeetingList meetingList = new MeetingList();
+		return meetingList;
 	}
 }
