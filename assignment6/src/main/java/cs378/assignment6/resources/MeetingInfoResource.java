@@ -29,6 +29,7 @@ public class MeetingInfoResource {
 		etlController.run();
 	}
 	
+	// Test method
 	@GET
 	@Path("/solum/getAll")
 	public String getAll() {
