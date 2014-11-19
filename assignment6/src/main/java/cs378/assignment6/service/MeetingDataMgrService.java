@@ -21,8 +21,8 @@ public class MeetingDataMgrService implements Loader, Reader {
                 .buildSessionFactory();
 	}
 	
-	public void load(Object source) throws Exception {
-		insertMeetingRecord(source);
+	public void load(Object objectToLoad) throws Exception {
+		insertMeetingRecord(objectToLoad);
 	}
 	
 	private void insertMeetingRecord(Object obj) {
@@ -36,7 +36,12 @@ public class MeetingDataMgrService implements Loader, Reader {
 
 	public Object read(Object source) throws Exception {
 
-		// Build the list of meetings 
+		// Build the list of meetings
+		
+		// Use Hibernate to query meeting list from the table
+		// Build MeetingList and send it back
+		
+		
 		MeetingList meetingList = new MeetingList();
 		return meetingList;
 	}

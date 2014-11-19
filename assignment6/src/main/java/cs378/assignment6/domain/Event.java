@@ -1,5 +1,5 @@
 /*
- * Hibernate, Relational Persistence for Idiomatic Java
+q * Hibernate, Relational Persistence for Idiomatic Java
  *
  * Copyright (c) 2010, Red Hat Inc. or third-party contributors as
  * indicated by the @author tags or express copyright attribution
@@ -24,10 +24,13 @@
 package cs378.assignment6.domain;
 
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -37,24 +40,35 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table( name = "EVENTS" )
 public class Event {
+	
     private Long id;
+	
+    private Date date;
 
     private String title;
-    private Date date;
+    
+    private Meeting meeting;
 
 	public Event() {
 		// this form used by Hibernate
 	}
 
+	public Event(String title, Date date, Meeting meeting) {
+		// for application use, to create new events
+		this.title = title;
+		this.date = date;
+		this.meeting = meeting;
+	}
+	
 	public Event(String title, Date date) {
 		// for application use, to create new events
 		this.title = title;
 		this.date = date;
-	}
+	}	
 
 	@Id
 	@GeneratedValue(generator="increment")
-	@GenericGenerator(name="increment", strategy = "increment")
+	@GenericGenerator(name="increment", strategy = "increment")	
     public Long getId() {
 		return id;
     }
@@ -64,10 +78,20 @@ public class Event {
     }
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "EVENT_DATE")
+	@Column(name = "EVENT_DATE")    
     public Date getDate() {
 		return date;
     }
+	
+	@ManyToOne
+	@JoinColumn(name="meeting_name")	
+	public Meeting getMeeting() {
+		return meeting;
+	}
+	
+	public void setMeeting(Meeting meeting) {
+		this.meeting = meeting;
+	}
 
     public void setDate(Date date) {
 		this.date = date;

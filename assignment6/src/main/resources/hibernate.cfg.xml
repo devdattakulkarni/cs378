@@ -53,6 +53,7 @@
 
         <!-- Names the annotated entity class -->
         <mapping class="cs378.assignment6.domain.Event"/>
+        <mapping class="cs378.assignment6.domain.Meeting"/>
 
     </session-factory>
 
