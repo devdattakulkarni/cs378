@@ -26,7 +26,7 @@ public class MeetingInfoResource {
 		meetingDataReader = new MeetingDataMgrService();
 		
 		// Start data load
-		(new Thread(etlController)).start();;
+		//(new Thread(etlController)).start();;
 	}
 	
 	// Test method
